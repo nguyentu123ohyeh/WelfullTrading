@@ -84,7 +84,21 @@
                     <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Products</a>
                     <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Solutions</a>
                     <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Pricing</a>
-                    <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Resources</a>
+                    <!-- DROPDOWN MENU START (Converted to Tailwind) -->
+                    <div class="relative group cursor-pointer h-20 flex items-center">
+                        <div class="flex items-center text-gray-600 hover:text-wallex-purple font-medium transition">
+                            <span>Resources</span> 
+                            <!-- Thay icon bootstrap bằng fontawesome -->
+                            <i class="fas fa-chevron-down ml-1 text-xs pt-1"></i>
+                        </div>
+                        
+                        <!-- Dropdown Content -->
+                        <div class="absolute top-16 left-0 w-60 bg-white shadow-lg rounded-lg py-2 border border-gray-100 hidden group-hover:block transition-all duration-200 z-50">
+                            <a href="exchange.html" class="block px-4 py-2 text-sm text-gray-600 hover:text-wallex-purple hover:bg-purple-50 transition">Currency Converter</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-600 hover:text-wallex-purple hover:bg-purple-50 transition">Referral</a>
+                        </div>
+                    </div>
+                    <!-- DROPDOWN MENU END -->
                     <a href="contact.html" class="block px-3 py-3 rounded-md text-base font-medium text-wallex-purple font-bold">Contact Us</a>
                 </div>
 
@@ -106,13 +120,59 @@
         </div>
 
         <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
-            <div class="px-4 pt-2 pb-6 space-y-2">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg h-screen overflow-y-auto pb-20">
+            <div class="px-4 pt-4 pb-6 space-y-1">
+                <!-- Main Links -->
                 <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-wallex-purple hover:bg-purple-50">Products</a>
                 <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-wallex-purple hover:bg-purple-50">Solutions</a>
                 <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-wallex-purple hover:bg-purple-50">Pricing</a>
-                <a href="contact.html" class="block px-3 py-3 rounded-md text-base font-medium text-wallex-purple font-bold">Contact Us</a>
-                <a href="#" class="block px-3 py-3 mt-4 text-center rounded-md text-base font-medium bg-wallex-purple text-white shadow-button">Get Started</a>
+                
+                <!-- Resources Group (Mobile Style) -->
+                <div class="pt-2 mt-2 border-t border-gray-50">
+                    <p class="px-3 text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Resources</p>
+                    
+                    <a href="exchange.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-wallex-purple hover:bg-purple-50 flex items-center">
+                        <i class="fas fa-calculator w-6 text-center mr-2 text-gray-400"></i> Currency Converter
+                    </a>
+                    <a href="faq.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-wallex-purple hover:bg-purple-50 flex items-center">
+                        <i class="fas fa-question-circle w-6 text-center mr-2 text-gray-400"></i> FAQ
+                    </a>
+                </div>
+
+                <!-- Contact & CTA -->
+                <div class="pt-4 mt-2 border-t border-gray-100">
+                    <a href="contact.html" class="block px-3 py-3 rounded-md text-base font-bold text-wallex-purple bg-purple-50">Contact Us</a>
+                    <a href="#" class="block px-3 py-3 mt-4 text-center rounded-md text-base font-medium bg-wallex-purple text-white shadow-button">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg h-screen overflow-y-auto pb-20">
+            <div class="px-4 pt-4 pb-6 space-y-1">
+                <!-- Main Links -->
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-wallex-purple hover:bg-purple-50">Products</a>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-wallex-purple hover:bg-purple-50">Solutions</a>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-wallex-purple hover:bg-purple-50">Pricing</a>
+                
+                <!-- Resources Group (Mobile Style) -->
+                <div class="pt-2 mt-2 border-t border-gray-50">
+                    <p class="px-3 text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Resources</p>
+                    
+                    <a href="exchange.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-wallex-purple hover:bg-purple-50 flex items-center">
+                        <i class="fas fa-calculator w-6 text-center mr-2 text-gray-400"></i> Currency Converter
+                    </a>
+                    <a href="faq.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-wallex-purple hover:bg-purple-50 flex items-center">
+                        <i class="fas fa-question-circle w-6 text-center mr-2 text-gray-400"></i> FAQ
+                    </a>
+                </div>
+
+                <!-- Contact & CTA -->
+                <div class="pt-4 mt-2 border-t border-gray-100">
+                    <a href="contact.html" class="block px-3 py-3 rounded-md text-base font-bold text-wallex-purple bg-purple-50">Contact Us</a>
+                    <a href="#" class="block px-3 py-3 mt-4 text-center rounded-md text-base font-medium bg-wallex-purple text-white shadow-button">Get Started</a>
+                </div>
             </div>
         </div>
     </nav>

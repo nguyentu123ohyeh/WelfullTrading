@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Wallex</title>
+    <title>Currency Exchange | Wallex</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -15,7 +15,7 @@
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
                         wallex: {
-                            purple: '#5631CC',
+                            purple: '#5631CC', // Wallex Purple Branding
                             dark: '#1A1A2E',
                             light: '#F4F7FE',
                             accent: '#00D4FF',
@@ -30,14 +30,6 @@
             }
         }
     </script>
-    <style>
-        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #1a202c; }
-        .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #2d3748; }
-        .prose p { margin-bottom: 1rem; line-height: 1.7; color: #4a5568; }
-        .prose ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1rem; color: #4a5568; }
-        .sidebar-link { border-left-width: 4px; border-color: transparent; }
-        .sidebar-link.active { background-color: #F4F7FE; color: #5631CC; border-color: #5631CC; font-weight: 600; }
-    </style>
 </head>
 <body class="font-sans text-gray-700 antialiased bg-gray-50 flex flex-col min-h-screen">
 
@@ -128,77 +120,86 @@
         </div>
     </nav>
 
-    <main class="flex-grow pt-20">
-        <div class="bg-wallex-dark text-white py-12">
-            <div class="max-w-7xl mx-auto px-4">
-                <h1 class="text-3xl font-bold">Privacy Policy</h1>
-                <p class="text-gray-400 mt-2">Last updated: October 2023</p>
+    <!-- Main Content -->
+    <main class="flex-grow pt-20 flex items-center justify-center relative overflow-hidden">
+        <!-- Decorative Background -->
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-purple-200 rounded-full blur-3xl opacity-20"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-blue-200 rounded-full blur-3xl opacity-20"></div>
+
+        <div class="container mx-auto px-4 relative z-10 flex flex-col items-center py-12">
+            
+            <div class="text-center mb-10">
+                <h1 class="text-3xl md:text-4xl font-bold text-wallex-dark mb-4">Currency Converter</h1>
+                <p class="text-gray-500 max-w-xl mx-auto">Check live foreign exchange rates. We offer competitive mid-market rates for your global business needs.</p>
             </div>
-        </div>
 
-        <div class="max-w-7xl mx-auto px-4 py-12 flex flex-col lg:flex-row gap-8">
-            <!-- Sidebar -->
-            <aside class="w-full lg:w-1/4">
-                <div class="bg-white rounded-lg shadow-sm sticky top-24 overflow-hidden border border-gray-100">
-                    <div class="p-4 bg-gray-50 border-b font-bold text-gray-500 text-xs uppercase">Documents</div>
-                    <nav class="flex flex-col">
-                        <a href="privacy.html" class="sidebar-link active block px-5 py-4 hover:bg-gray-50 transition">Privacy Policy</a>
-                        <a href="terms.html" class="sidebar-link block px-5 py-4 text-gray-600 hover:bg-gray-50 transition">Terms of Use</a>
-                        <a href="cookies.html" class="sidebar-link block px-5 py-4 text-gray-600 hover:bg-gray-50 transition">Cookie Policy</a>
-                    </nav>
+            <!-- FX CALCULATOR COMPONENT -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md border border-gray-100 transform transition hover:shadow-2xl duration-300">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">Check Live Rates</h2>
+                    <div class="flex items-center gap-2">
+                        <span class="relative flex h-3 w-3">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                        </span>
+                        <span class="text-xs font-semibold text-green-600">Live Market</span>
+                    </div>
                 </div>
-            </aside>
 
-            <!-- Content -->
-            <div class="w-full lg:w-3/4 bg-white rounded-lg shadow-sm border border-gray-100 p-8 md:p-12 prose max-w-none">
-                <p>Wallex Technologies Pte Ltd ("Wallex", "we", "us" or "our") respects your privacy and is committed to protecting your personal data. This Privacy Policy will inform you as to how we look after your personal data when you visit our website (regardless of where you visit it from) or use our services.</p>
+                <!-- Amount Input -->
+                <div class="mb-4">
+                    <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">You Send</label>
+                    <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-purple-500 focus-within:border-transparent transition">
+                        <input type="number" id="amount-one" class="w-full p-4 outline-none text-xl font-bold text-gray-800" value="1000" placeholder="0">
+                        <select id="currency-one" class="bg-gray-50 border-l p-4 font-bold text-gray-700 outline-none cursor-pointer hover:bg-gray-100 transition">
+                            <option value="USD" selected>USD 🇺🇸</option>
+                            <option value="HKD">HKD 🇭🇰</option>
+                            <option value="SGD">SGD 🇸🇬</option>
+                            <option value="CNY">CNY 🇨🇳</option>
+                            <option value="EUR">EUR 🇪🇺</option>
+                            <option value="GBP">GBP 🇬🇧</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Swap Button -->
+                <div class="flex justify-center -my-3 relative z-10">
+                    <button id="swap" class="bg-white border border-gray-200 text-wallex-purple p-2 rounded-full shadow-md hover:bg-gray-50 hover:rotate-180 transition duration-300">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+                </div>
+
+                <!-- Result Output -->
+                <div class="mb-6 mt-1">
+                    <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">They Receive (Estimated)</label>
+                    <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden bg-gray-50">
+                        <input type="number" id="amount-two" class="w-full p-4 outline-none text-xl font-bold text-gray-800 bg-transparent" placeholder="0" readonly>
+                        <select id="currency-two" class="bg-gray-50 border-l p-4 font-bold text-gray-700 outline-none cursor-pointer hover:bg-gray-100 transition">
+                            <option value="VND" selected>VND 🇻🇳</option>
+                            <option value="IDR">IDR 🇮🇩</option>
+                            <option value="PHP">PHP 🇵🇭</option>
+                            <option value="MYR">MYR 🇲🇾</option>
+                            <option value="THB">THB 🇹🇭</option>
+                            <option value="USD">USD 🇺🇸</option>
+                            <option value="HKD">HKD 🇭🇰</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Exchange Rate Info -->
+                <div class="flex justify-between items-center text-sm text-gray-500 mb-6 bg-purple-50 p-3 rounded-lg">
+                    <span>Current Rate:</span>
+                    <span id="rate" class="font-bold text-wallex-purple">Fetching...</span>
+                </div>
+
+                <button id="get-quote-btn" class="w-full bg-wallex-purple text-white font-bold py-4 rounded-xl shadow-button hover:bg-purple-700 transition transform hover:-translate-y-0.5">
+                    Get Quote
+                </button>
                 
-                <h3>1. Information We Collect</h3>
-                <p>We may collect, use, store and transfer different kinds of personal data about you which we have grouped together follows:</p>
-                <ul>
-                    <li><strong>Identity Data:</strong> includes first name, last name, username or similar identifier, title, date of birth, gender, and government-issued identification documents (e.g., passport, ID card) required for KYC purposes.</li>
-                    <li><strong>Contact Data:</strong> includes billing address, delivery address, email address, telephone numbers, and proof of address documents.</li>
-                    <li><strong>Financial Data:</strong> includes bank account details, payment card details, and financial statements required for business verification.</li>
-                    <li><strong>Transaction Data:</strong> includes details about payments to and from you, beneficiary details, and other details of products and services you have purchased from us.</li>
-                    <li><strong>Technical Data:</strong> includes internet protocol (IP) address, your login data, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform, and other technology on the devices you use to access this website.</li>
-                </ul>
-
-                <h3>2. How We Use Your Personal Data</h3>
-                <p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:</p>
-                <ul>
-                    <li>To register you as a new customer and verify your identity (KYC/KYB processes).</li>
-                    <li>To process and deliver your orders including managing payments, fees, and charges.</li>
-                    <li>To manage our relationship with you which will include notifying you about changes to our terms or privacy policy.</li>
-                    <li>To administer and protect our business and this website (including troubleshooting, data analysis, testing, system maintenance, support, reporting and hosting of data).</li>
-                    <li>To comply with a legal or regulatory obligation, such as Anti-Money Laundering (AML) and Counter-Terrorism Financing (CTF) regulations.</li>
-                </ul>
-
-                <h3>3. Disclosures of Your Personal Data</h3>
-                <p>We may share your personal data with the parties set out below for the purposes set out in Section 2:</p>
-                <ul>
-                    <li><strong>Internal Third Parties:</strong> Other companies in the Wallex Group acting as joint controllers or processors.</li>
-                    <li><strong>External Third Parties:</strong> Service providers acting as processors who provide IT and system administration services, banking partners, and liquidity providers necessary to execute your transactions.</li>
-                    <li><strong>Regulators:</strong> Professional advisers acting as processors or joint controllers including lawyers, bankers, auditors and insurers; and regulators and other authorities who require reporting of processing activities in certain circumstances.</li>
-                </ul>
-
-                <h3>4. International Transfers</h3>
-                <p>As a global payment provider, we share your personal data within the Wallex Group and with external third parties (such as correspondent banks). This will involve transferring your data outside the country where you are located. Whenever we transfer your personal data, we ensure a similar degree of protection is afforded to it by ensuring at least one of the following safeguards is implemented:</p>
-                <ul>
-                    <li>We will only transfer your personal data to countries that have been deemed to provide an adequate level of protection for personal data.</li>
-                    <li>Where we use certain service providers, we may use specific contracts approved for use which give personal data the same protection it has in its origin jurisdiction.</li>
-                </ul>
-
-                <h3>5. Data Security</h3>
-                <p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors and other third parties who have a business need to know. They will only process your personal data on our instructions and they are subject to a duty of confidentiality.</p>
-                
-                <h3>6. Data Retention</h3>
-                <p>We will only retain your personal data for as long as reasonably necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, regulatory, tax, accounting or reporting requirements. We may retain your personal data for a longer period in the event of a complaint or if we reasonably believe there is a prospect of litigation in respect to our relationship with you.</p>
-
-                <h3>7. Your Legal Rights</h3>
-                <p>Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to request access, correction, erasure, restriction, transfer, to object to processing, to portability of data and (where the lawful ground of processing is consent) to withdraw consent. If you wish to exercise any of the rights set out above, please contact us.</p>
-
-                <h3>8. Contact Details</h3>
-                <p>If you have any questions about this privacy policy or our privacy practices, please contact our Data Protection Officer at: <a href="mailto:dpo@wallex.asia" class="text-wallex-purple hover:underline">dpo@wallex.asia</a>.</p>
+                <p class="text-xs text-gray-400 text-center mt-4">
+                    *Mid-market rates. Information only. <br>Last updated: <span id="last-updated">--</span>
+                </p>
             </div>
         </div>
     </main>
@@ -259,16 +260,74 @@
         </div>
     </footer>
 
-    <!-- Mobile Menu Script -->
+    <!-- JAVASCRIPT LOGIC -->
     <script>
+        // --- Mobile Menu Logic ---
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-
         if(btn && menu){
             btn.addEventListener('click', () => {
                 menu.classList.toggle('hidden');
             });
         }
+
+        // --- FX Calculator Logic ---
+        const currencyEl_one = document.getElementById('currency-one');
+        const amountEl_one = document.getElementById('amount-one');
+        const currencyEl_two = document.getElementById('currency-two');
+        const amountEl_two = document.getElementById('amount-two');
+        
+        const rateEl = document.getElementById('rate');
+        const swap = document.getElementById('swap');
+        const lastUpdatedEl = document.getElementById('last-updated');
+
+        // Hàm lấy tỷ giá từ API miễn phí (Open Exchange Rates hoặc tương tự)
+        function calculate() {
+            const currency_one = currencyEl_one.value;
+            const currency_two = currencyEl_two.value;
+            
+            // Hiển thị loading
+            rateEl.innerText = "Loading...";
+
+            // Gọi API (Dùng API công khai của exchangerate-api)
+            fetch(`https://api.exchangerate-api.com/v4/latest/${currency_one}`)
+                .then(res => res.json())
+                .then(data => {
+                    const rate = data.rates[currency_two];
+                    
+                    // Hiển thị tỷ giá
+                    rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`;
+                    
+                    // Tính toán số tiền nhận được
+                    amountEl_two.value = (amountEl_one.value * rate).toFixed(2);
+                    
+                    // Cập nhật thời gian
+                    const now = new Date();
+                    lastUpdatedEl.innerText = now.toLocaleTimeString();
+                })
+                .catch(err => {
+                    rateEl.innerText = "Error fetching rates";
+                    console.error(err);
+                });
+        }
+
+        // Event Listeners
+        currencyEl_one.addEventListener('change', calculate);
+        amountEl_one.addEventListener('input', calculate);
+        currencyEl_two.addEventListener('change', calculate);
+        amountEl_two.addEventListener('input', calculate);
+
+        // Swap Logic
+        swap.addEventListener('click', () => {
+            const temp = currencyEl_one.value;
+            currencyEl_one.value = currencyEl_two.value;
+            currencyEl_two.value = temp;
+            calculate();
+        });
+
+        // Init
+        calculate();
     </script>
+
 </body>
 </html>
