@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Wallex</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        wallex: {
+                            purple: '#5631CC',
+                            dark: '#1A1A2E',
+                            light: '#F4F7FE',
+                            accent: '#00D4FF',
+                            text: '#4A5568'
+                        }
+                    },
+                    boxShadow: {
+                        'card': '0 4px 20px rgba(0, 0, 0, 0.05)',
+                        'button': '0 4px 14px 0 rgba(86, 49, 204, 0.39)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #1a202c; }
+        .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #2d3748; }
+        .prose p { margin-bottom: 1rem; line-height: 1.7; color: #4a5568; }
+        .prose ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1rem; color: #4a5568; }
+        .sidebar-link { border-left-width: 4px; border-color: transparent; }
+        .sidebar-link.active { background-color: #F4F7FE; color: #5631CC; border-color: #5631CC; font-weight: 600; }
+    </style>
+</head>
+<body class="font-sans text-gray-700 antialiased bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Navbar (Updated from Index) -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center cursor-pointer">
+                    <!-- SVG Logo Simulation -->
+                    <svg class="h-8 w-auto" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.5 20L15 35L7.5 20L0 5H7.5L15 20L22.5 5H30L22.5 20Z" fill="#5631CC"/>
+                        <path d="M42 35H35V5H42V35Z" fill="#1A1A2E"/>
+                        <path d="M60 35H53V5H60V35Z" fill="#1A1A2E"/>
+                        <path d="M78 35H71V5H78V35Z" fill="#1A1A2E"/>
+                        <path d="M105 35H88V28H105V35ZM105 23H88V17H105V23ZM105 12H88V5H105V12Z" fill="#1A1A2E"/>
+                        <path d="M125 35L118 25L111 35H103L114 20L103 5H111L118 15L125 5H133L122 20L133 35H125Z" fill="#1A1A2E"/>
+                    </svg>
+                    <span class="ml-2 text-2xl font-bold text-wallex-purple tracking-tighter">WALLEX</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Products</a>
+                    <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Solutions</a>
+                    <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Pricing</a>
+                    <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Resources</a>
+                </div>
+
+                <!-- Auth Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+
+                    <a href="#" class="bg-wallex-purple text-white px-6 py-2.5 rounded-full font-semibold shadow-button hover:bg-purple-700 transition transform hover:-translate-y-0.5">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-wallex-purple focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-wallex-purple hover:bg-purple-50">Products</a>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-wallex-purple hover:bg-purple-50">Solutions</a>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-wallex-purple hover:bg-purple-50">Pricing</a>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-wallex-purple font-bold">Log In</a>
+                <a href="#" class="block px-3 py-3 mt-4 text-center rounded-md text-base font-medium bg-wallex-purple text-white shadow-button">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-20">
+        <div class="bg-wallex-dark text-white py-12">
+            <div class="max-w-7xl mx-auto px-4">
+                <h1 class="text-3xl font-bold">Privacy Policy</h1>
+                <p class="text-gray-400 mt-2">Last updated: October 2023</p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 py-12 flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar -->
+            <aside class="w-full lg:w-1/4">
+                <div class="bg-white rounded-lg shadow-sm sticky top-24 overflow-hidden border border-gray-100">
+                    <div class="p-4 bg-gray-50 border-b font-bold text-gray-500 text-xs uppercase">Documents</div>
+                    <nav class="flex flex-col">
+                        <a href="privacy.html" class="sidebar-link active block px-5 py-4 hover:bg-gray-50 transition">Privacy Policy</a>
+                        <a href="terms.html" class="sidebar-link block px-5 py-4 text-gray-600 hover:bg-gray-50 transition">Terms of Use</a>
+                        <a href="cookies.html" class="sidebar-link block px-5 py-4 text-gray-600 hover:bg-gray-50 transition">Cookie Policy</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Content -->
+            <div class="w-full lg:w-3/4 bg-white rounded-lg shadow-sm border border-gray-100 p-8 md:p-12 prose max-w-none">
+                <p>Wallex Technologies Pte Ltd ("Wallex", "we", "us" or "our") respects your privacy and is committed to protecting your personal data. This Privacy Policy will inform you as to how we look after your personal data when you visit our website (regardless of where you visit it from) or use our services.</p>
+                
+                <h3>1. Information We Collect</h3>
+                <p>We may collect, use, store and transfer different kinds of personal data about you which we have grouped together follows:</p>
+                <ul>
+                    <li><strong>Identity Data:</strong> includes first name, last name, username or similar identifier, title, date of birth, gender, and government-issued identification documents (e.g., passport, ID card) required for KYC purposes.</li>
+                    <li><strong>Contact Data:</strong> includes billing address, delivery address, email address, telephone numbers, and proof of address documents.</li>
+                    <li><strong>Financial Data:</strong> includes bank account details, payment card details, and financial statements required for business verification.</li>
+                    <li><strong>Transaction Data:</strong> includes details about payments to and from you, beneficiary details, and other details of products and services you have purchased from us.</li>
+                    <li><strong>Technical Data:</strong> includes internet protocol (IP) address, your login data, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform, and other technology on the devices you use to access this website.</li>
+                </ul>
+
+                <h3>2. How We Use Your Personal Data</h3>
+                <p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:</p>
+                <ul>
+                    <li>To register you as a new customer and verify your identity (KYC/KYB processes).</li>
+                    <li>To process and deliver your orders including managing payments, fees, and charges.</li>
+                    <li>To manage our relationship with you which will include notifying you about changes to our terms or privacy policy.</li>
+                    <li>To administer and protect our business and this website (including troubleshooting, data analysis, testing, system maintenance, support, reporting and hosting of data).</li>
+                    <li>To comply with a legal or regulatory obligation, such as Anti-Money Laundering (AML) and Counter-Terrorism Financing (CTF) regulations.</li>
+                </ul>
+
+                <h3>3. Disclosures of Your Personal Data</h3>
+                <p>We may share your personal data with the parties set out below for the purposes set out in Section 2:</p>
+                <ul>
+                    <li><strong>Internal Third Parties:</strong> Other companies in the Wallex Group acting as joint controllers or processors.</li>
+                    <li><strong>External Third Parties:</strong> Service providers acting as processors who provide IT and system administration services, banking partners, and liquidity providers necessary to execute your transactions.</li>
+                    <li><strong>Regulators:</strong> Professional advisers acting as processors or joint controllers including lawyers, bankers, auditors and insurers; and regulators and other authorities who require reporting of processing activities in certain circumstances.</li>
+                </ul>
+
+                <h3>4. International Transfers</h3>
+                <p>As a global payment provider, we share your personal data within the Wallex Group and with external third parties (such as correspondent banks). This will involve transferring your data outside the country where you are located. Whenever we transfer your personal data, we ensure a similar degree of protection is afforded to it by ensuring at least one of the following safeguards is implemented:</p>
+                <ul>
+                    <li>We will only transfer your personal data to countries that have been deemed to provide an adequate level of protection for personal data.</li>
+                    <li>Where we use certain service providers, we may use specific contracts approved for use which give personal data the same protection it has in its origin jurisdiction.</li>
+                </ul>
+
+                <h3>5. Data Security</h3>
+                <p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors and other third parties who have a business need to know. They will only process your personal data on our instructions and they are subject to a duty of confidentiality.</p>
+                
+                <h3>6. Data Retention</h3>
+                <p>We will only retain your personal data for as long as reasonably necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, regulatory, tax, accounting or reporting requirements. We may retain your personal data for a longer period in the event of a complaint or if we reasonably believe there is a prospect of litigation in respect to our relationship with you.</p>
+
+                <h3>7. Your Legal Rights</h3>
+                <p>Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to request access, correction, erasure, restriction, transfer, to object to processing, to portability of data and (where the lawful ground of processing is consent) to withdraw consent. If you wish to exercise any of the rights set out above, please contact us.</p>
+
+                <h3>8. Contact Details</h3>
+                <p>If you have any questions about this privacy policy or our privacy practices, please contact our Data Protection Officer at: <a href="mailto:dpo@wallex.asia" class="text-wallex-purple hover:underline">dpo@wallex.asia</a>.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-2">
+                    <span class="text-2xl font-bold text-white tracking-tighter mb-4 block">WALLEX</span>
+                    <p class="mb-6 max-w-sm text-sm">Wallex is a leading B2B FX and cross-border payment platform for Asian businesses, licensed in Singapore, Indonesia, and Hong Kong.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Products</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-wallex-purple transition">Global Account</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">International Payments</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">FX Conversion</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">Bulk Payments</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-wallex-purple transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">Press</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-wallex-purple transition">Help Center</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">API Documentation</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; 2023 Wallex Technologies. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white">Terms of Use</a>
+                    <a href="cookies.html" class="hover:text-white">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if(btn && menu){
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

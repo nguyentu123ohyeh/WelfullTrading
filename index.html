@@ -1,931 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallex | B2B Cross-border Payments & FX</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Favicons -->
-  <link href="assets/img/logo.jpeg" rel="icon">
-  <link href="assets/img/logo.jpeg" rel="logo">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: SnapFolio
-  * Template URL: https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/
-  * Updated: Jul 21 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Config mimicking Wallex Brand -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        wallex: {
+                            purple: '#5631CC', // Primary Brand Color
+                            dark: '#1A1A2E',
+                            light: '#F4F7FE',
+                            accent: '#00D4FF',
+                            text: '#4A5568'
+                        }
+                    },
+                    boxShadow: {
+                        'card': '0 4px 20px rgba(0, 0, 0, 0.05)',
+                        'button': '0 4px 14px 0 rgba(86, 49, 204, 0.39)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Custom Utilities */
+        .text-gradient {
+            background: linear-gradient(90deg, #5631CC 0%, #00D4FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .bg-pattern {
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%235631cc' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
 </head>
+<body class="font-sans text-gray-700 antialiased overflow-x-hidden">
 
-<body class="index-page">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <!-- SVG Logo Simulation -->
+                    <svg class="h-8 w-auto" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.5 20L15 35L7.5 20L0 5H7.5L15 20L22.5 5H30L22.5 20Z" fill="#5631CC"/>
+                        <path d="M42 35H35V5H42V35Z" fill="#1A1A2E"/>
+                        <path d="M60 35H53V5H60V35Z" fill="#1A1A2E"/>
+                        <path d="M78 35H71V5H78V35Z" fill="#1A1A2E"/>
+                        <path d="M105 35H88V28H105V35ZM105 23H88V17H105V23ZM105 12H88V5H105V12Z" fill="#1A1A2E"/>
+                        <path d="M125 35L118 25L111 35H103L114 20L103 5H111L118 15L125 5H133L122 20L133 35H125Z" fill="#1A1A2E"/>
+                    </svg>
+                    <span class="ml-2 text-2xl font-bold text-wallex-purple tracking-tighter">WALLEX</span>
+                </div>
 
-  <header id="header" class="header dark-background d-flex flex-column justify-content-center">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Products</a>
+                    <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Solutions</a>
+                    <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Pricing</a>
+                    <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Resources</a>
+                </div>
 
-    <div class="header-container d-flex flex-column align-items-start">
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-          <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-          <li><a href="#product"><i class="bi bi-images navicon"></i> Electronic and Technology</a></li>
-          <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Fabric</a></li>
-          <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+                <!-- Auth Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
 
-        </ul>
-      </nav>
-    </div>
+                    <a href="#" class="bg-wallex-purple text-white px-6 py-2.5 rounded-full font-semibold shadow-button hover:bg-purple-700 transition transform hover:-translate-y-0.5">
+                        Get Started
+                    </a>
+                </div>
 
-  </header>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-wallex-purple focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
 
-  <main class="main">
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-wallex-purple hover:bg-purple-50">Products</a>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-wallex-purple hover:bg-purple-50">Solutions</a>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-wallex-purple hover:bg-purple-50">Pricing</a>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-wallex-purple font-bold">Log In</a>
+                <a href="#" class="block px-3 py-3 mt-4 text-center rounded-md text-base font-medium bg-wallex-purple text-white shadow-button">Get Started</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section">
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-pattern">
+        <!-- Decoration blobs -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-purple-100 rounded-full blur-3xl opacity-50"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
 
-      <div class="background-elements">
-        <div class="bg-circle circle-1"></div>
-        <div class="bg-circle circle-2"></div>
-      </div>
-
-      <div class="hero-content">
-        <div class="container">
-          <div class="row align-items-center">
-
-            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-              <div class="hero-text">
-                <h1>WELFULL <span class="accent-text">TRADING</span> Co. LIMITED</h1>
-                <h2>Connecting the World</h2>
-                <p class="lead">Leading Import - Export Company with 10+ Years of Experience</p>
-                <p class="description">
-                  We specialize in international trade of high-quality IT accessories, electronic products and fabric. With a global network of over 300 partners, we deliver value and reliability to every shipment.
-                </p>
-                <div class="hero-actions">
-                  <a href="#product" class="btn btn-primary">Explore Us</a>
-                  <a href="mailto:sales@welfulxport.com" class="btn btn-outline">Contact Us</a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <!-- Text Content -->
+                <div class="text-center lg:text-left">
+                    <div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-purple-50 border border-purple-100 text-wallex-purple font-semibold text-sm">
+                        🚀 Trusted by 35,000+ businesses globally
+                    </div>
+                    <h1 class="text-4xl lg:text-6xl font-bold leading-tight text-gray-900 mb-6">
+                        Seamless <span class="text-gradient">B2B Payments</span> & FX Solutions
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Manage your international payments, collections, and FX with better rates and faster speeds. Simplified for modern businesses.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#" class="bg-wallex-purple text-white px-8 py-4 rounded-full font-bold shadow-button hover:bg-purple-700 transition transform hover:-translate-y-1 text-center">
+                            Open Free Account
+                        </a>
+                        <a href="#" class="bg-white text-wallex-purple border border-gray-200 px-8 py-4 rounded-full font-bold hover:bg-gray-50 transition flex items-center justify-center gap-2">
+                            <i class="fas fa-play-circle"></i> Watch Demo
+                        </a>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-500">
+                        *Regulated by MAS (Singapore), BI (Indonesia) & HK Customs.
+                    </p>
                 </div>
-              </div>
-            </div>
 
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-              <div class="hero-visual">
-                <div class="profile-container">
-                  <div class="profile-background"></div>
-                  <img src="assets/img/logo.jpeg" alt="WELFULL TRADING Co. LIMITED" class="profile-image">
+                <!-- Hero Image / Illustration -->
+                <div class="relative group perspective">
+                    <div class="relative bg-white rounded-2xl shadow-2xl border border-gray-100 p-2 transform transition-transform duration-500 hover:rotate-1">
+                        <!-- Simulated Dashboard UI -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden">
+                            <!-- Dashboard Header -->
+                            <div class="bg-white p-4 border-b border-gray-100 flex justify-between items-center">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-wallex-purple flex items-center justify-center text-white font-bold">W</div>
+                                    <div>
+                                        <div class="text-sm font-bold text-gray-800">Global Account</div>
+                                        <div class="text-xs text-gray-500">ID: 8829-1102</div>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-xs text-gray-500">Total Balance</div>
+                                    <div class="text-lg font-bold text-gray-800">$142,500.00 USD</div>
+                                </div>
+                            </div>
+                            <!-- Mock Graph/Activity -->
+                            <div class="p-6">
+                                <div class="flex justify-between items-end h-32 gap-2 mb-6">
+                                    <div class="w-full bg-purple-100 rounded-t-lg h-16 hover:bg-wallex-purple transition-colors"></div>
+                                    <div class="w-full bg-purple-100 rounded-t-lg h-24 hover:bg-wallex-purple transition-colors"></div>
+                                    <div class="w-full bg-purple-100 rounded-t-lg h-20 hover:bg-wallex-purple transition-colors"></div>
+                                    <div class="w-full bg-purple-100 rounded-t-lg h-28 hover:bg-wallex-purple transition-colors"></div>
+                                    <div class="w-full bg-wallex-purple rounded-t-lg h-32 shadow-lg"></div>
+                                    <div class="w-full bg-purple-100 rounded-t-lg h-24 hover:bg-wallex-purple transition-colors"></div>
+                                </div>
+                                <!-- Transaction List -->
+                                <div class="space-y-3">
+                                    <div class="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center"><i class="fas fa-arrow-down"></i></div>
+                                            <div>
+                                                <div class="text-sm font-bold">Received from Client A</div>
+                                                <div class="text-xs text-gray-500">Today, 10:23 AM</div>
+                                            </div>
+                                        </div>
+                                        <div class="font-bold text-green-600">+$12,000.00</div>
+                                    </div>
+                                    <div class="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center"><i class="fas fa-arrow-up"></i></div>
+                                            <div>
+                                                <div class="text-sm font-bold">Payment to Supplier X</div>
+                                                <div class="text-xs text-gray-500">Yesterday</div>
+                                            </div>
+                                        </div>
+                                        <div class="font-bold text-gray-800">-$4,350.50</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-gray-50 flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                            <div class="bg-green-100 p-2 rounded-full text-green-600">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-500">Exchange Rate</div>
+                                <div class="text-sm font-bold text-gray-800">USD to SGD <span class="text-green-500">Best Rate</span></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-
-          </div>
         </div>
-      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row">
-          <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
-            <div class="profile-card">
-              <div class="profile-header">
-                <div class="profile-image">
-                  <img src="assets/img/logo.jpeg" alt="Office" class="img-fluid">
-                </div>
-                <div class="profile-badge">
-                  <i class="bi bi-check-circle-fill"></i>
-                </div>
-              </div>
-              <div class="profile-content">
-                <h3>WELFULL TRADING Co. LIMITED</h3>
-                <p class="profession">International Import & Export Services</p>
-                <div class="contact-links">
-                  <a href="mailto:info@welfulltrading.com" class="contact-item">
-                    <i class="bi bi-envelope"></i>
-                    info@welfulltrading.com
-                  </a>
-                  <a href="#" class="contact-item">
-                    <i class="bi bi-geo-alt"></i>
-                    FLAT/RM 1406B 14/F THE BELGIAN BANK BUILDING, 721-725 NATHAN ROAD, MONGKOK, KOWLOON, HONG KONG
-                  </a>
-                </div>
-              </div>
+    <!-- Social Proof / Logos -->
+    <section class="py-10 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-8">Empowering leading companies worldwide</p>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Replaced with Text Placeholders for Logos to avoid broken images -->
+                <span class="text-xl font-bold text-gray-400">INVESTREE</span>
+                <span class="text-xl font-bold text-gray-400">AMARTHA</span>
+                <span class="text-xl font-bold text-gray-400">KLOOK</span>
+                <span class="text-xl font-bold text-gray-400">CODEGM</span>
+                <span class="text-xl font-bold text-gray-400">STYLE THEORY</span>
             </div>
-          </div>
-          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
-            <div class="about-content">
-              <div class="section-header">
-                <span class="badge-text">About Us</span>
-                <h2>Trusted Partner in Global Trade</h2>
-              </div>
-              <div class="description">
-                <p>
-                  With over 10 years of experience, WELFULL TRADING Co. LIMITED has established itself as a leading import-export company in HongKong, connecting domestic and international markets.
-                </p>
-                <p>
-                  We specialize in international trade of high-quality electronic and technology accessories. With a global network of over 300 partners, we deliver value and reliability to every shipment.
-                </p>
-              </div>
-              <div class="stats-grid">
-                <div class="stat-item">
-                  <div class="stat-number">10+</div>
-                  <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">300+</div>
-                  <div class="stat-label">Global Partners</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">5000+</div>
-                  <div class="stat-label">Successful Shipments</div>
-                </div>
-              </div>
-              <div class="details-grid">
-                <div class="detail-row">
-                  <div class="detail-item">
-                    <span class="detail-label">Main Products</span>
-                    <span class="detail-value">Electronic and Technology Accessories</span>
-                  </div>
-                  <div class="detail-item">
-                    <span class="detail-label">Expanding Products</span>
-                    <span class="detail-value">Fabric (Contact Us For More Details)</span>
-                  </div>
-                  <div class="detail-item">
-                    <span class="detail-label">Scope</span>
-                    <span class="detail-value">Import & Export Worldwide</span>
-                  </div>
-                </div>
-                <div class="detail-row">
-                  <div class="detail-item">
-                    <span class="detail-label">Head Office</span>
-                    <span class="detail-value">FLAT/RM 1406B 14/F THE BELGIAN BANK BUILDING, 721-725 NATHAN ROAD, MONGKOK, KOWLOON, HONG KONG</span>
-                  </div>
-                  <div class="detail-item">
-                    <span class="detail-label">Languages</span>
-                    <span class="detail-value"> English, Chinese</span>
-                  </div>
-                </div>
-              </div>
-              <div class="cta-section">
-                <a href="#portfolio" class="btn btn-primary">
-                  <i class="bi bi-airplane-engines"></i>
-                  Explore Our Products
-                </a>
-                <a href="mailto:sales@welfulxport.com" class="btn btn-outline">
-                  <i class="bi bi-chat-dots"></i>
-                  Get Consultation
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <section id="stats" class="stats section light-background">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="stats-wrapper">
-              <div class="stats-item" data-aos="zoom-in" data-aos-delay="150">
-                <div class="icon-wrapper">
-                  <i class="bi bi-globe"></i>
-                </div>
-                <span data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Global Partners</p>
-              </div>
-              <div class="stats-item" data-aos="zoom-in" data-aos-delay="200">
-                <div class="icon-wrapper">
-                  <i class="bi bi-truck"></i>
-                </div>
-                <span data-purecounter-start="0" data-purecounter-end="5000" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Shipments Completed</p>
-              </div>
-              <div class="stats-item" data-aos="zoom-in" data-aos-delay="250">
-                <div class="icon-wrapper">
-                  <i class="bi bi-calendar-check"></i>
-                </div>
-                <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Years of Experience</p>
-              </div>
-              <div class="stats-item" data-aos="zoom-in" data-aos-delay="300">
-                <div class="icon-wrapper">
-                  <i class="bi bi-emoji-smile"></i>
-                </div>
-                <span data-purecounter-start="0" data-purecounter-end="1000" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Satisfied Clients</p>
-              </div>
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-wallex-purple font-semibold tracking-wide uppercase text-sm mb-2">Our Capabilities</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">One Platform, Infinite Possibilities</h3>
+                <p class="text-gray-600 text-lg">Simplify your global financial operations with our suite of B2B payment tools.</p>
             </div>
-          </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-card hover:shadow-xl transition duration-300 border border-transparent hover:border-purple-100 group">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-wallex-purple text-2xl mb-6 group-hover:bg-wallex-purple group-hover:text-white transition">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Cross-Border Payments</h4>
+                    <p class="text-gray-600 mb-4">Send money to 180+ countries in 47+ currencies. Enjoy competitive rates and low fees compared to banks.</p>
+                    <a href="#" class="text-wallex-purple font-semibold hover:underline">Learn more &rarr;</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-card hover:shadow-xl transition duration-300 border border-transparent hover:border-purple-100 group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Virtual Accounts</h4>
+                    <p class="text-gray-600 mb-4">Create virtual accounts to collect payments locally in IDR, SGD, USD, EUR, GBP and more easily.</p>
+                    <a href="#" class="text-wallex-purple font-semibold hover:underline">Learn more &rarr;</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-card hover:shadow-xl transition duration-300 border border-transparent hover:border-purple-100 group">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-green-600 text-2xl mb-6 group-hover:bg-green-600 group-hover:text-white transition">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">FX Conversion</h4>
+                    <p class="text-gray-600 mb-4">Lock in rates for 24 hours. Spot and forward contracts available to hedge against currency volatility.</p>
+                    <a href="#" class="text-wallex-purple font-semibold hover:underline">Learn more &rarr;</a>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Our Expertise</h2>
-        <p>Professional solutions for international trade and supply chain management.</p>
-      </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
-              <h3>Import - Export Services</h3>
-              <div class="skills-animation">
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Fabrics Trading</h4>
-                    <span class="skill-percentage">98%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="skill-tooltip">Supplying and exporting all kinds of fabrics for garment and industrial use</div>
+    <!-- Why Choose Us / Trust Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-200 to-blue-200 rounded-2xl transform rotate-3 scale-95 opacity-50"></div>
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80" alt="Business Meeting" class="relative rounded-2xl shadow-2xl object-cover h-[500px] w-full">
+                    
+                    <!-- Floating Stat -->
+                    <div class="absolute bottom-8 right-8 bg-white p-6 rounded-xl shadow-xl max-w-xs">
+                        <div class="flex items-center gap-4 mb-2">
+                            <div class="text-4xl font-bold text-wallex-purple">$7B+</div>
+                        </div>
+                        <p class="text-gray-600 font-medium">Annualized GTV processed securely.</p>
+                    </div>
                 </div>
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Phone & Computer Accessories</h4>
-                    <span class="skill-percentage">95%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="skill-tooltip">Importing and distributing accessories for phones, tablets, and PCs</div>
+                
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Built for Security and Scale</h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-wallex-purple">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900">Licensed & Regulated</h4>
+                                <p class="text-gray-600 mt-1">We operate under strict regulations by Monetary Authority of Singapore (MAS) and Bank Indonesia (BI).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900">Dedicated Account Management</h4>
+                                <p class="text-gray-600 mt-1">Get support from real humans. Our dedicated account managers are here to help your business grow.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900">Fast & Transparent</h4>
+                                <p class="text-gray-600 mt-1">Track payments in real-time via SWIFT gpi. No hidden fees, just pure speed.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
-              <h3>Logistics & Support</h3>
-              <div class="skills-animation">
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Customs Clearance</h4>
-                    <span class="skill-percentage">90%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="skill-tooltip">Professional customs procedures for all types of goods</div>
-                </div>
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>International Shipping</h4>
-                    <span class="skill-percentage">92%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="skill-tooltip">Door-to-door delivery to more than 50 countries</div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Company Journey</h2>
-    <p>
-      Over a decade of continuous growth, WELFULL TRADING Co. LIMITED has built a strong reputation in the field of international import and export, serving thousands of customers and partners worldwide.
-    </p>
-  </div>
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row gy-4">
-      <div class="col-lg-4">
-        <div class="resume-side" data-aos="fade-right" data-aos-delay="100">
-          <div class="profile-img mb-4">
-            <img src="assets/img/logo.jpeg" alt="Company Logo" class="img-fluid rounded">
-          </div>
-          <h3>Company Overview</h3>
-          <p>
-            Founded in 2013, WELFULL TRADING Co. LIMITED is committed to delivering quality, efficiency, and trust in every transaction. Our team of experienced professionals ensures smooth operations and customer satisfaction.
-          </p>
-          <h3 class="mt-4">Contact Information</h3>
-          <ul class="contact-info list-unstyled">
-            <li><i class="bi bi-geo-alt"></i> FLAT/RM 1406B 14/F THE BELGIAN BANK BUILDING, 721-725 NATHAN ROAD, MONGKOK, KOWLOON, HONG KONG</li>
-            <li><i class="bi bi-envelope"></i> info@welfulltrading.com</li>
-            <li><i class="bi bi-linkedin"></i> linkedin.com/company/welfulltrading</li>
-          </ul>
-          <div class="skills-animation mt-4">
-            <h3>Core Competencies</h3>
-            <div class="skill-item">
-              <div class="d-flex justify-content-between">
-                <span>International Trade</span>
-                <span>98%</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+    <!-- Call To Action -->
+    <section class="py-20 bg-wallex-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to take your business global?</h2>
+            <p class="text-xl text-gray-300 mb-10">Join thousands of businesses saving time and money with Wallex today.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="bg-wallex-purple hover:bg-purple-600 text-white px-8 py-4 rounded-full font-bold shadow-lg transition text-lg">Get Started Free</a>
+                <a href="#" class="bg-transparent border border-gray-500 hover:bg-white hover:text-wallex-dark text-white px-8 py-4 rounded-full font-bold transition text-lg">Contact Sales</a>
             </div>
-            <div class="skill-item">
-              <div class="d-flex justify-content-between">
-                <span>Supply Chain Management</span>
-                <span>95%</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="d-flex justify-content-between">
-                <span>Customer Service</span>
-                <span>97%</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="d-flex justify-content-between">
-                <span>Global Networking</span>
-                <span>93%</span>
-              </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right column with experience and education -->
-      <div class="col-lg-8 ps-4 ps-lg-5">
-        <div class="resume-section" data-aos="fade-up">
-          <h3><i class="bi bi-briefcase me-2"></i>Development Milestones</h3>
-          <div class="resume-item">
-            <h4>Founded & First Exports</h4>
-            <h5>2013 - 2015</h5>
-            <p class="company"><i class="bi bi-building"></i> WELFULL TRADING Co. LIMITED</p>
-            <ul>
-              <li>Established in Kowloon, focusing on exporting HongKong-made fabrics</li>
-              <li>First international contracts with partners in Korea and Japan</li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <h4>Expansion & Diversification</h4>
-            <h5>2016 - 2020</h5>
-            <p class="company"><i class="bi bi-building"></i> WELFULL TRADING Co. LIMITED</p>
-            <ul>
-              <li>Expanded product portfolio to include phone and computer accessories</li>
-              <li>Developed logistics and customs services for clients</li>
-              <li>Reached 100+ global partners</li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <h4>Global Integration</h4>
-            <h5>2021 - Present</h5>
-            <p class="company"><i class="bi bi-building"></i> WELFULL TRADING Co. LIMITED</p>
-            <ul>
-              <li>300+ partners across Asia, Europe, and America</li>
-              <li>Digital transformation for supply chain and customer service</li>
-              <li>Continuous growth in both revenue and market share</li>
-            </ul>
-          </div>
         </div>
-        <div class="resume-section" data-aos="fade-up" data-aos-delay="100">
-          <h3><i class="bi bi-mortarboard me-2"></i>Certifications & Memberships</h3>
-          <div class="resume-item">
-            <h4>ISO 9001:2015 Certified</h4>
-            <h5>Quality Management System</h5>
-          </div>
-          <div class="resume-item">
-            <h4>Authorized Economic Operator (AEO)</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="product" class="portfolio section">
-
-<!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Electronic and Technology Accessories</h2>
-      <p>
-        Discover our selection of outstanding digital accessories for phones and computers.<br>
-        We offer a wide range of high-quality products to meet all your technology needs in both retail and wholesale.
-      </p>
-    </div><!-- End Section Title -->
-
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-      <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-        <div class="row">
-          <div class="col-lg-3 filter-sidebar">
-            <div class="filters-wrapper" data-aos="fade-right" data-aos-delay="150">
-              <ul class="portfolio-filters isotope-filters">
-                <li data-filter="*" class="filter-active">All Accessories</li>
-                <li data-filter=".filter-phone">Phone Accessories</li>
-                <li data-filter=".filter-computer">Computer Accessories</li>
-                <li data-filter=".filter-audio">Audio Devices</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-9">
-            <div class="row gy-4 portfolio-container isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-              <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-phone">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/phone-case.jpg" class="img-fluid" alt="Premium Phone Case" loading="lazy">
-                  <div class="portfolio-info">
-                    <div class="content">
-                      <span class="category">Phone Accessories</span>
-                      <h4>Premium Phone Case</h4>
-                      <div class="portfolio-links">
-                        <a href="assets/img/accessories/phone-case.jpg" class="glightbox" title="Premium Phone Case"><i class="bi bi-plus-lg"></i></a>
-                        <a href="product-details.html#phonecase" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                      </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-2">
+                    <span class="text-2xl font-bold text-white tracking-tighter mb-4 block">WALLEX</span>
+                    <p class="mb-6 max-w-sm text-sm">Wallex is a leading B2B FX and cross-border payment platform for Asian businesses, licensed in Singapore, Indonesia, and Hong Kong.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
                     </div>
-                  </div>
                 </div>
-              </div><!-- End Portfolio Item -->
-
-              <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-phone">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/popsockets.jpg" class="img-fluid" alt="Popsocket" loading="lazy">
-                  <div class="portfolio-info">
-                    <div class="content">
-                      <span class="category">Phone Accessories</span>
-                      <h4>Popsocket</h4>
-                      <div class="portfolio-links">
-                        <a href="assets/img/popsockets.jpg" class="glightbox" title="Popsocket"><i class="bi bi-plus-lg"></i></a>
-                        <a href="product-details.html#popsocket" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                      </div>
-                    </div>
-                  </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Products</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-wallex-purple transition">Global Account</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">International Payments</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">FX Conversion</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">Bulk Payments</a></li>
+                    </ul>
                 </div>
-              </div><!-- End Portfolio Item -->
-
-              <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-computer">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/keyboard.jpg" class="img-fluid" alt="Wireless Keyboard" loading="lazy">
-                  <div class="portfolio-info">
-                    <div class="content">
-                      <span class="category">Computer Accessories</span>
-                      <h4>Wireless Keyboard</h4>
-                      <div class="portfolio-links">
-                        <a href="assets/img/keyboard.jpg" class="glightbox" title="Wireless Keyboard"><i class="bi bi-plus-lg"></i></a>
-                        <a href="product-details.html#keyboard" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                      </div>
-                    </div>
-                  </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-wallex-purple transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">Press</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">Contact</a></li>
+                    </ul>
                 </div>
-              </div><!-- End Portfolio Item -->
-
-              <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-computer">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/mouse.jpg" class="img-fluid" alt="Ergonomic Mouse" loading="lazy">
-                  <div class="portfolio-info">
-                    <div class="content">
-                      <span class="category">Computer Accessories</span>
-                      <h4>Ergonomic Mouse</h4>
-                      <div class="portfolio-links">
-                        <a href="assets/img/mouse.jpg" class="glightbox" title="Ergonomic Mouse"><i class="bi bi-plus-lg"></i></a>
-                        <a href="product-details.html#mouse" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                      </div>
-                    </div>
-                  </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-wallex-purple transition">Help Center</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">API Documentation</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">Security</a></li>
+                    </ul>
                 </div>
-              </div><!-- End Portfolio Item -->
-
-              <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-audio">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/audio.jpg" class="img-fluid" alt="Wireless Headphones" loading="lazy">
-                  <div class="portfolio-info">
-                    <div class="content">
-                      <span class="category">Audio Devices</span>
-                      <h4>Wireless Headphones</h4>
-                      <div class="portfolio-links">
-                        <a href="assets/img/audio.jpg" class="glightbox" title="Wireless Headphones"><i class="bi bi-plus-lg"></i></a>
-                        <a href="product-details.html#headphone" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- End Portfolio Item -->
-
-              <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-phone">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/screen-protector.jpg" class="img-fluid" alt="Screen Protector" loading="lazy">
-                  <div class="portfolio-info">
-                    <div class="content">
-                      <span class="category">Phone Accessories</span>
-                      <h4>Screen Protector</h4>
-                      <div class="portfolio-links">
-                        <a href="assets/img/screen-protector.jpg" class="glightbox" title="Screen Protector"><i class="bi bi-plus-lg"></i></a>
-                        <a href="product-details.html#screenprotector" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- End Portfolio Item -->
-
-            </div><!-- End .portfolio-container -->
-
-          </div><!-- End .col-lg-9 -->
-
-              <!-- Thông báo đặt ở đây, sau .portfolio-container -->
-            <div class="portfolio-info-box mt-5" data-aos="fade-up" data-aos-delay="300" style="text-align: center;">
-              <strong>We offer a wide variety of over 20,000 accessories.</strong>
-              <span>Please contact us at <a href="mailto:sales@welfulxport.com">sales@welfulxport.com</a> for the brochure/catalogue</span>
             </div>
-
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; 2023 Wallex Technologies. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white">Terms of Use</a>
+                    <a href="cookies.html" class="hover:text-white">Cookie Policy</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-<section id="portfolio" class="portfolio section">
+    <!-- Simple Script for Mobile Menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
 
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Fabric</h2>
-        <p>
-      These are our most outstanding fabric types, representing the quality and diversity we offer.<br>
-      A collection of high-quality fabrics for import and export. We offer a wide range of textile materials to meet various manufacturing and global trading needs.<br>
-      Due to new line of business, please contact us for information and special deals
-    </p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-      <div class="row">
-        <div class="col-lg-3 filter-sidebar">
-          <div class="filters-wrapper" data-aos="fade-right" data-aos-delay="150">
-            <ul class="portfolio-filters isotope-filters">
-              <li data-filter="*" class="filter-active">All Fabrics</li>
-              <li data-filter=".filter-photography">Cotton</li>
-              <li data-filter=".filter-design">Polyester</li>
-              <li data-filter=".filter-automotive">Denim</li>
-              <li data-filter=".filter-nature">Linen</li>
-            </ul>
-          </div>
-        </div>
-
-      <div class="col-lg-9">
-        <div class="row gy-4 portfolio-container isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography">
-            <div class="portfolio-wrap">
-              <img src="assets/img/cotton.jpg" class="img-fluid" alt="Cotton Fabric" loading="lazy">
-              <div class="portfolio-info">
-                <div class="content">
-                  <span class="category">Cotton</span>
-                  <h4>Premium Cotton Fabric</h4>
-                  <div class="portfolio-links">
-                    <a href="assets/img/cotton.jpg" class="glightbox" title="Premium Cotton Fabric"><i class="bi bi-plus-lg"></i></a>
-                    <a href="portfolio-details.html#cotton" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design">
-            <div class="portfolio-wrap">
-              <img src="assets/img/polyester.jpg" class="img-fluid" alt="Polyester Fabric" loading="lazy">
-              <div class="portfolio-info">
-                <div class="content">
-                  <span class="category">Polyester</span>
-                  <h4>Durable Polyester Fabric</h4>
-                  <div class="portfolio-links">
-                    <a href="assets/img/polyester.jpg" class="glightbox" title="Durable Polyester Fabric"><i class="bi bi-plus-lg"></i></a>
-                    <a href="portfolio-details.html#polyester" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-automotive">
-            <div class="portfolio-wrap">
-              <img src="assets/img/close-up-of-jeans-fabric-texture-background-free-photo.jpeg" class="img-fluid" alt="Denim Fabric" loading="lazy">
-              <div class="portfolio-info">
-                <div class="content">
-                  <span class="category">Denim</span>
-                  <h4>Classic Denim Fabric</h4>
-                  <div class="portfolio-links">
-                    <a href="assets/img/close-up-of-jeans-fabric-texture-background-free-photo.jpeg" class="glightbox" title="Classic Denim Fabric"><i class="bi bi-plus-lg"></i></a>
-                    <a href="portfolio-details.html#denim" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-nature">
-            <div class="portfolio-wrap">
-              <img src="assets/img/linen.jpg" class="img-fluid" alt="Linen Fabric" loading="lazy">
-              <div class="portfolio-info">
-                <div class="content">
-                  <span class="category">Linen</span>
-                  <h4>Natural Linen Fabric</h4>
-                  <div class="portfolio-links">
-                    <a href="assets/img/linen.jpg" class="glightbox" title="Natural Linen Fabric"><i class="bi bi-plus-lg"></i></a>
-                    <a href="portfolio-details.html#linen" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography">
-            <div class="portfolio-wrap">
-              <img src="assets/img/organic-cotton.jpg" class="img-fluid" alt="Organic Cotton Fabric" loading="lazy">
-              <div class="portfolio-info">
-                <div class="content">
-                  <span class="category">Cotton</span>
-                  <h4>Organic Cotton Fabric</h4>
-                  <div class="portfolio-links">
-                    <a href="assets/img/organic-cotton.jpg" class="glightbox" title="Organic Cotton Fabric"><i class="bi bi-plus-lg"></i></a>
-                    <a href="portfolio-details.html#organic" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design">
-            <div class="portfolio-wrap">
-              <img src="assets/img/recycled-polyester.jpg" class="img-fluid" alt="Recycled Polyester Fabric" loading="lazy">
-              <div class="portfolio-info">
-                <div class="content">
-                  <span class="category">Polyester</span>
-                  <h4>Recycled Polyester Fabric</h4>
-                  <div class="portfolio-links">
-                    <a href="assets/img/recycled-polyester.jpg" class="glightbox" title="Recycled Polyester Fabric"><i class="bi bi-plus-lg"></i></a>
-                    <a href="portfolio-details.html#recycled" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          </div><!-- End .portfolio-container -->
-
-        </div><!-- End .col-lg-9 -->
-                  <div class="portfolio-info-box mt-5" data-aos="fade-up" data-aos-delay="300" style="text-align: center;">
-            <strong>We have over 1000 fabric types.</strong>
-            <span>If you need more references, please contact us at <a href="mailto:sales@welfulxport.com">sales@welfulxport.com</a> for the brochure/catalogue </span>
-          </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- Services Section -->
-  <section id="services" class="services section">
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Our Services</h2>
-      <p>Comprehensive solutions for import, export, and global supply chain management.</p>
-    </div>
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <div class="service-header">
-        <div class="row align-items-center">
-          <div class="col-lg-8 col-md-12">
-            <div class="service-intro">
-              <h2 class="service-heading">
-                <div>Professional Import - Export</div>
-                <div><span>and Logistics Solutions</span></div>
-              </h2>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-12">
-            <div class="service-summary">
-              <p>
-                We offer end-to-end services from sourcing, customs clearance, to global shipping for all kinds of fabrics and electronic accessories.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-card position-relative z-1" id="fabric">
-            <div class="service-icon">
-              <i class="bi bi-box-seam"></i>
-            </div>
-            <a href="service-details.html#fabric" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-              <i class="bi bi-arrow-up-right"></i>
-            </a>
-            <h3>
-              <a href="service-details.html#fabric">
-                Fabric <span>Export</span>
-              </a>
-            </h3>
-            <p>
-              Supplying and exporting a wide range of fabrics for garment, industrial and household use to Asia, Europe, and America.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-card position-relative z-1" id="accessories">
-            <div class="service-icon">
-              <i class="bi bi-phone"></i>
-            </div>
-            <a href="service-details.html#accessories" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-              <i class="bi bi-arrow-up-right"></i>
-            </a>
-            <h3>
-              <a href="service-details.html#accessories">
-                Accessories <span>Import</span>
-              </a>
-            </h3>
-            <p>
-              Importing and distributing phone cases, chargers, cables, and computer accessories from top global suppliers.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-card position-relative z-1" id="logistics">
-            <div class="service-icon">
-              <i class="bi bi-truck"></i>
-            </div>
-            <a href="service-details.html#logistics" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-              <i class="bi bi-arrow-up-right"></i>
-            </a>
-            <h3>
-              <a href="service-details.html#logistics">
-                Logistics <span>Solutions</span>
-              </a>
-            </h3>
-            <p>
-              Comprehensive logistics, warehousing, and customs clearance services for smooth and safe delivery worldwide.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-card position-relative z-1" id="sourcing">
-            <div class="service-icon">
-              <i class="bi bi-people"></i>
-            </div>
-            <a href="service-details.html#sourcing" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-              <i class="bi bi-arrow-up-right"></i>
-            </a>
-            <h3>
-              <a href="service-details.html#sourcing">
-                Sourcing <span>Consulting</span>
-              </a>
-            </h3>
-            <p>
-              Consulting and connecting with reliable suppliers and buyers in Vietnam and worldwide.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-card position-relative z-1" id="market">
-            <div class="service-icon">
-              <i class="bi bi-graph-up"></i>
-            </div>
-            <a href="service-details.html#market" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-              <i class="bi bi-arrow-up-right"></i>
-            </a>
-            <h3>
-              <a href="service-details.html#market">
-                Market <span>Development</span>
-              </a>
-            </h3>
-            <p>
-              Market research and development support for businesses looking to expand globally.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-    <!-- Contact Section
-    <section id="contact" class="contact section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Get in touch for consultation, quotation, or partnership opportunities.</p>
-      </div>
-      <div class="container">
-        <div class="row g-4 g-lg-5">
-          <div class="col-lg-5">
-            <div class="info-box">
-              <h3>Contact Info</h3>
-              <p>
-                We are ready to support all your import-export needs. Contact us by phone, email, or visit our office.
-              </p>
-              <div class="info-item">
-                <div class="icon-box">
-                  <i class="bi bi-geo-alt"></i>
-                </div>
-                <div class="content">
-                  <h4>Our Location</h4>
-                  <p>FLAT/RM 1406B 14/F THE BELGIAN BANK BUILDING</p>
-                  <p>721-725 NATHAN ROAD, MONGKOK, KOWLOON, HONG KONG</p>
-                </div>
-              </div>
-              <div class="info-item">
-                <div class="icon-box">
-                  <i class="bi bi-envelope"></i>
-                </div>
-                <div class="content">
-                  <h4>Email Address</h4>
-                  <p>info@welfulltrading.com</p>
-                </div>
-              </div>
-            </div>
-          </div>
-      <div class="col-lg-7">
-        <div class="contact-form">
-          <h3>Send Us a Message</h3>
-          <p>
-            Please fill in the form below. We will respond as soon as possible.
-          </p>
-          <form action="forms/contact.php" method="post" class="php-email-form">
-            <div class="row gy-4">
-              <div class="col-md-6">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-              </div>
-              <div class="col-md-6 ">
-                <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-              </div>
-              <div class="col-12">
-                <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-              </div>
-              <div class="col-12">
-                <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-              </div>
-              <div class="col-12 text-center">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-                <button type="submit" class="btn">Send Message</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-  </main>
-
-<footer id="footer" class="footer position-relative">
-  <div class="container">
-    <div class="copyright text-center ">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">WELFULL TRADING Co. LIMITED</strong> <span>All Rights Reserved</span></p>
-      <p class="address-footer">FLAT/RM 1406B 14/F THE BELGIAN BANK BUILDING, 721-725 NATHAN ROAD, MONGKOK, KOWLOON, HONG KONG</p>
-    </div>
-  </div>
-</footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
-
 </html>

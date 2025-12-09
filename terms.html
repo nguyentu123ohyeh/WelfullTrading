@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use | Wallex</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        wallex: {
+                            purple: '#5631CC',
+                            dark: '#1A1A2E',
+                            light: '#F4F7FE',
+                            accent: '#00D4FF',
+                            text: '#4A5568'
+                        }
+                    },
+                    boxShadow: {
+                        'card': '0 4px 20px rgba(0, 0, 0, 0.05)',
+                        'button': '0 4px 14px 0 rgba(86, 49, 204, 0.39)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #1a202c; }
+        .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #2d3748; }
+        .prose p { margin-bottom: 1rem; line-height: 1.7; color: #4a5568; }
+        .sidebar-link { border-left-width: 4px; border-color: transparent; }
+        .sidebar-link.active { background-color: #F4F7FE; color: #5631CC; border-color: #5631CC; font-weight: 600; }
+    </style>
+</head>
+<body class="font-sans text-gray-700 antialiased bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Navbar (Updated from Index) -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center cursor-pointer">
+                    <!-- SVG Logo Simulation -->
+                    <svg class="h-8 w-auto" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.5 20L15 35L7.5 20L0 5H7.5L15 20L22.5 5H30L22.5 20Z" fill="#5631CC"/>
+                        <path d="M42 35H35V5H42V35Z" fill="#1A1A2E"/>
+                        <path d="M60 35H53V5H60V35Z" fill="#1A1A2E"/>
+                        <path d="M78 35H71V5H78V35Z" fill="#1A1A2E"/>
+                        <path d="M105 35H88V28H105V35ZM105 23H88V17H105V23ZM105 12H88V5H105V12Z" fill="#1A1A2E"/>
+                        <path d="M125 35L118 25L111 35H103L114 20L103 5H111L118 15L125 5H133L122 20L133 35H125Z" fill="#1A1A2E"/>
+                    </svg>
+                    <span class="ml-2 text-2xl font-bold text-wallex-purple tracking-tighter">WALLEX</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Products</a>
+                    <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Solutions</a>
+                    <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Pricing</a>
+                    <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Resources</a>
+                </div>
+
+                <!-- Auth Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+
+                    <a href="#" class="bg-wallex-purple text-white px-6 py-2.5 rounded-full font-semibold shadow-button hover:bg-purple-700 transition transform hover:-translate-y-0.5">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-wallex-purple focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-wallex-purple hover:bg-purple-50">Products</a>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-wallex-purple hover:bg-purple-50">Solutions</a>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-wallex-purple hover:bg-purple-50">Pricing</a>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-wallex-purple font-bold">Log In</a>
+                <a href="#" class="block px-3 py-3 mt-4 text-center rounded-md text-base font-medium bg-wallex-purple text-white shadow-button">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-20">
+        <div class="bg-wallex-dark text-white py-12">
+            <div class="max-w-7xl mx-auto px-4">
+                <h1 class="text-3xl font-bold">Terms of Use</h1>
+                <p class="text-gray-400 mt-2">Effective Date: January 1, 2023</p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 py-12 flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar -->
+            <aside class="w-full lg:w-1/4">
+                <div class="bg-white rounded-lg shadow-sm sticky top-24 overflow-hidden border border-gray-100">
+                    <div class="p-4 bg-gray-50 border-b font-bold text-gray-500 text-xs uppercase">Documents</div>
+                    <nav class="flex flex-col">
+                        <a href="privacy.html" class="sidebar-link block px-5 py-4 text-gray-600 hover:bg-gray-50 transition">Privacy Policy</a>
+                        <a href="terms.html" class="sidebar-link active block px-5 py-4 hover:bg-gray-50 transition">Terms of Use</a>
+                        <a href="cookies.html" class="sidebar-link block px-5 py-4 text-gray-600 hover:bg-gray-50 transition">Cookie Policy</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Content -->
+            <div class="w-full lg:w-3/4 bg-white rounded-lg shadow-sm border border-gray-100 p-8 md:p-12 prose max-w-none">
+                <p>Please read these Terms of Use ("Terms", "Terms of Use") carefully before using the Wallex website and services operated by Wallex Technologies ("us", "we", or "our").</p>
+                
+                <h3>1. Acceptance of Terms</h3>
+                <p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.</p>
+                <p>By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.</p>
+                
+                <h3>2. Accounts & Registration</h3>
+                <p>When you create an account with us, you must provide us information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service.</p>
+                <p>You are responsible for safeguarding the password that you use to access the Service and for any activities or actions under your password, whether your password is with our Service or a third-party service. You agree not to disclose your password to any third party. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.</p>
+                
+                <h3>3. Prohibited Uses</h3>
+                <p>You may use the Service only for lawful purposes and in accordance with these Terms. You agree not to use the Service:</p>
+                <ul>
+                    <li>In any way that violates any applicable national or international law or regulation (including, without limitation, any laws regarding the export of data or software to and from Singapore or other countries).</li>
+                    <li>For the purpose of exploiting, harming, or attempting to exploit or harm minors in any way by exposing them to inappropriate content or otherwise.</li>
+                    <li>To transmit, or procure the sending of, any advertising or promotional material, including any "junk mail", "chain letter", "spam", or any other similar solicitation.</li>
+                    <li>To impersonate or attempt to impersonate Wallex, a Wallex employee, another user, or any other person or entity.</li>
+                    <li>To engage in any conduct that restricts or inhibits anyone's use or enjoyment of the Service, or which, as determined by us, may harm Wallex or users of the Service or expose them to liability.</li>
+                </ul>
+
+                <h3>4. Intellectual Property</h3>
+                <p>The Service and its original content, features and functionality are and will remain the exclusive property of Wallex Technologies and its licensors. The Service is protected by copyright, trademark, and other laws of both the Singapore and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Wallex Technologies.</p>
+                
+                <h3>5. Links To Other Web Sites</h3>
+                <p>Our Service may contain links to third-party web sites or services that are not owned or controlled by Wallex Technologies.</p>
+                <p>Wallex Technologies has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that Wallex Technologies shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.</p>
+
+                <h3>6. Termination</h3>
+                <p>We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+                <p>All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.</p>
+
+                <h3>7. Indemnification</h3>
+                <p>You agree to defend, indemnify and hold harmless Wallex Technologies and its licensee and licensors, and their employees, contractors, agents, officers and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees), resulting from or arising out of a) your use and access of the Service, by you or any person using your account and password, or b) a breach of these Terms.</p>
+
+                <h3>8. Limitation of Liability</h3>
+                <p>In no event shall Wallex Technologies, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.</p>
+
+                <h3>9. Governing Law</h3>
+                <p>These Terms shall be governed and construed in accordance with the laws of Singapore, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.</p>
+
+                <h3>10. Changes</h3>
+                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-2">
+                    <span class="text-2xl font-bold text-white tracking-tighter mb-4 block">WALLEX</span>
+                    <p class="mb-6 max-w-sm text-sm">Wallex is a leading B2B FX and cross-border payment platform for Asian businesses, licensed in Singapore, Indonesia, and Hong Kong.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Products</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-wallex-purple transition">Global Account</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">International Payments</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">FX Conversion</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">Bulk Payments</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-wallex-purple transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">Press</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-wallex-purple transition">Help Center</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">API Documentation</a></li>
+                        <li><a href="#" class="hover:text-wallex-purple transition">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; 2023 Wallex Technologies. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white">Terms of Use</a>
+                    <a href="cookies.html" class="hover:text-white">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if(btn && menu){
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
