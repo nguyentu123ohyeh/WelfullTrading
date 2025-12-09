@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Currency Wallet | Wallex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { wallex: { purple: '#5631CC', dark: '#1A1A2E' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-700 bg-white flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white border-b border-gray-100 h-20 flex items-center px-8 justify-between">
+        <a href="index.html" class="text-2xl font-bold text-wallex-purple">WALLEX</a>
+        <div class="hidden md:flex gap-6">
+            <a href="contact.html" class="bg-wallex-purple text-white px-5 py-2 rounded-full font-bold">Contact Sales</a>
+        </div>
+    </nav>
+
+    <!-- SUB-NAV -->
+    <div class="pt-20 bg-gray-50 border-b border-gray-200 overflow-x-auto sticky top-20 z-40">
+        <div class="max-w-7xl mx-auto px-4 flex space-x-8 text-sm font-medium whitespace-nowrap">
+            <a href="product/global-payment.html" class="py-4 text-gray-500 hover:text-gray-900">Global Payment</a>
+            <a href="product/collection.html" class="py-4 text-gray-500 hover:text-gray-900">International Collection</a>
+            <a href="product/wallet.html" class="py-4 text-wallex-purple border-b-2 border-wallex-purple">Multi-currency Wallet</a>
+            <a href="product/fx.html" class="py-4 text-gray-500 hover:text-gray-900">FX Conversion</a>
+            <a href="product/cash-management.html" class="py-4 text-gray-500 hover:text-gray-900">Cash Management</a>
+        </div>
+    </div>
+
+    <main class="flex-grow">
+        <!-- Hero -->
+        <section class="bg-wallex-dark text-white py-24 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-purple-500 opacity-20 blur-3xl rounded-full"></div>
+            <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Your Global Treasury <br>in One Place</h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-12">Hold, convert, and manage your global funds in a single dashboard. Stop managing multiple banking portals and tokens.</p>
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 max-w-4xl mx-auto border border-white/20">
+                    <!-- Fake Dashboard Header -->
+                    <div class="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
+                        <div class="text-left">
+                            <p class="text-xs text-gray-400 uppercase">Total Balance (SGD Equiv)</p>
+                            <p class="text-3xl font-bold">SGD 245,000.00</p>
+                        </div>
+                        <button class="bg-wallex-purple hover:bg-purple-600 text-white px-4 py-2 rounded text-sm font-bold">Convert</button>
+                    </div>
+                    <!-- Fake Currency List -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-white/5 p-3 rounded text-left">
+                            <p class="text-xs text-gray-400">🇺🇸 USD</p>
+                            <p class="font-bold">$50,000.00</p>
+                        </div>
+                        <div class="bg-white/5 p-3 rounded text-left">
+                            <p class="text-xs text-gray-400">🇪🇺 EUR</p>
+                            <p class="font-bold">€25,000.00</p>
+                        </div>
+                        <div class="bg-white/5 p-3 rounded text-left">
+                            <p class="text-xs text-gray-400">🇬🇧 GBP</p>
+                            <p class="font-bold">£10,000.00</p>
+                        </div>
+                        <div class="bg-white/5 p-3 rounded text-left">
+                            <p class="text-xs text-gray-400">🇸🇬 SGD</p>
+                            <p class="font-bold">S$85,000.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Features -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="text-center group">
+                        <div class="w-16 h-16 bg-purple-50 rounded-full flex items-center justify-center text-wallex-purple text-3xl mx-auto mb-6 group-hover:bg-wallex-purple group-hover:text-white transition">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Strategic Holding</h3>
+                        <p class="text-gray-600">Market volatility? No problem. Receive funds when rates are low, hold them in your wallet, and convert only when rates improve. You are in control.</p>
+                    </div>
+                    <div class="text-center group">
+                        <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 text-3xl mx-auto mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Instant Liquidity</h3>
+                        <p class="text-gray-600">Need to pay a supplier in CNY but only have USD? Swap funds instantly within your wallet 24/7/365 to execute the payment.</p>
+                    </div>
+                    <div class="text-center group">
+                        <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center text-green-600 text-3xl mx-auto mb-6 group-hover:bg-green-600 group-hover:text-white transition">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Centralized Reporting</h3>
+                        <p class="text-gray-600">Say goodbye to consolidating statements from 5 different banks. Get a single, consolidated monthly statement for all your currency balances.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Supported Currencies Table -->
+        <section class="py-20 bg-gray-50 border-t border-gray-200">
+            <div class="max-w-5xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-4">13 Currencies to Hold, Swap & Pay</h2>
+                <p class="text-gray-600 mb-10 max-w-2xl mx-auto">Wallex allows you to maintain balances in these currencies without forced conversion.</p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 text-left">
+                    <!-- Item -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-3 border border-gray-100">
+                        <img src="https://flagcdn.com/w40/us.png" class="w-8 rounded shadow-sm">
+                        <div><p class="font-bold text-gray-900">USD</p><p class="text-xs text-gray-500">US Dollar</p></div>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-3 border border-gray-100">
+                        <img src="https://flagcdn.com/w40/sg.png" class="w-8 rounded shadow-sm">
+                        <div><p class="font-bold text-gray-900">SGD</p><p class="text-xs text-gray-500">Singapore Dollar</p></div>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-3 border border-gray-100">
+                        <img src="https://flagcdn.com/w40/eu.png" class="w-8 rounded shadow-sm">
+                        <div><p class="font-bold text-gray-900">EUR</p><p class="text-xs text-gray-500">Euro</p></div>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-3 border border-gray-100">
+                        <img src="https://flagcdn.com/w40/gb.png" class="w-8 rounded shadow-sm">
+                        <div><p class="font-bold text-gray-900">GBP</p><p class="text-xs text-gray-500">British Pound</p></div>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-3 border border-gray-100">
+                        <img src="https://flagcdn.com/w40/hk.png" class="w-8 rounded shadow-sm">
+                        <div><p class="font-bold text-gray-900">HKD</p><p class="text-xs text-gray-500">HK Dollar</p></div>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-3 border border-gray-100">
+                        <img src="https://flagcdn.com/w40/jp.png" class="w-8 rounded shadow-sm">
+                        <div><p class="font-bold text-gray-900">JPY</p><p class="text-xs text-gray-500">Japanese Yen</p></div>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-3 border border-gray-100">
+                        <img src="https://flagcdn.com/w40/au.png" class="w-8 rounded shadow-sm">
+                        <div><p class="font-bold text-gray-900">AUD</p><p class="text-xs text-gray-500">Australian Dollar</p></div>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-3 border border-gray-100">
+                        <img src="https://flagcdn.com/w40/ca.png" class="w-8 rounded shadow-sm">
+                        <div><p class="font-bold text-gray-900">CAD</p><p class="text-xs text-gray-500">Canadian Dollar</p></div>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-3 border border-gray-100">
+                        <img src="https://flagcdn.com/w40/ch.png" class="w-8 rounded shadow-sm">
+                        <div><p class="font-bold text-gray-900">CHF</p><p class="text-xs text-gray-500">Swiss Franc</p></div>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-3 border border-gray-100">
+                        <img src="https://flagcdn.com/w40/cn.png" class="w-8 rounded shadow-sm">
+                        <div><p class="font-bold text-gray-900">CNH</p><p class="text-xs text-gray-500">Offshore Yuan</p></div>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-3 border border-gray-100">
+                        <img src="https://flagcdn.com/w40/id.png" class="w-8 rounded shadow-sm">
+                        <div><p class="font-bold text-gray-900">IDR</p><p class="text-xs text-gray-500">Indonesian Rupiah</p></div>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-3 border border-gray-100">
+                        <img src="https://flagcdn.com/w40/th.png" class="w-8 rounded shadow-sm">
+                        <div><p class="font-bold text-gray-900">THB</p><p class="text-xs text-gray-500">Thai Baht</p></div>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center gap-3 border border-gray-100">
+                        <img src="https://flagcdn.com/w40/my.png" class="w-8 rounded shadow-sm">
+                        <div><p class="font-bold text-gray-900">MYR</p><p class="text-xs text-gray-500">Malaysian Ringgit</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 bg-blue-50 rounded-3xl p-10 flex flex-col md:flex-row items-center gap-8 border border-blue-100">
+                <div class="flex-shrink-0 text-5xl text-blue-600"><i class="fas fa-shield-alt"></i></div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-900">Safeguarding Your Funds</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Wallex adheres to strict regulatory standards across Singapore (MAS), Indonesia (BI), and Hong Kong. Your funds are kept in <strong>Customer Segregated Accounts</strong> at top-tier banks (like DBS and JPMorgan), separate from Wallex's own operational funds.
+                    </p>
+                    <a href="privacy.html" class="text-blue-700 font-bold hover:underline">Read our licensing details &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-wallex-dark text-gray-400 py-12 text-center text-sm">
+        <p>&copy; 2025 WELFULL TRADING Co. LIMITED.</p>
+    </footer>
+</body>
+</html>

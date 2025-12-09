@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Management | Wallex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { wallex: { purple: '#5631CC', dark: '#1A1A2E' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-700 bg-white flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white border-b border-gray-100 h-20 flex items-center px-8 justify-between">
+        <a href="index.html" class="text-2xl font-bold text-wallex-purple">WALLEX</a>
+        <div class="hidden md:flex gap-6">
+            <a href="contact.html" class="bg-wallex-purple text-white px-5 py-2 rounded-full font-bold">Contact Sales</a>
+        </div>
+    </nav>
+
+    <!-- SUB-NAV -->
+    <div class="pt-20 bg-gray-50 border-b border-gray-200 overflow-x-auto sticky top-20 z-40">
+        <div class="max-w-7xl mx-auto px-4 flex space-x-8 text-sm font-medium whitespace-nowrap">
+            <a href="product/global-payment.html" class="py-4 text-gray-500 hover:text-gray-900">Global Payment</a>
+            <a href="product/collection.html" class="py-4 text-gray-500 hover:text-gray-900">International Collection</a>
+            <a href="product/wallet.html" class="py-4 text-gray-500 hover:text-gray-900">Multi-currency Wallet</a>
+            <a href="product/fx.html" class="py-4 text-gray-500 hover:text-gray-900">FX Conversion</a>
+            <a href="product/cash-management.html" class="py-4 text-wallex-purple border-b-2 border-wallex-purple">Cash Management</a>
+        </div>
+    </div>
+
+    <main class="flex-grow">
+        <!-- Hero -->
+        <section class="py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <span class="inline-block px-4 py-1 rounded-full bg-green-100 text-green-700 font-bold text-sm uppercase tracking-wide mb-6">Boost your idle cash</span>
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Don't let inflation eat your business cash.</h1>
+                <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Earn competitive returns on your idle USD and SGD balances. Invest in low-risk Money Market Funds with daily liquidity.</p>
+                
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-200 shadow-xl inline-block text-left w-full max-w-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-green-500 opacity-5 rounded-bl-full"></div>
+                    <div class="grid grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <p class="text-sm text-gray-500 uppercase font-bold mb-1">Target Yield (USD)</p>
+                            <p class="text-4xl font-bold text-green-600">~4.8% p.a.</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 uppercase font-bold mb-1">Target Yield (SGD)</p>
+                            <p class="text-4xl font-bold text-wallex-purple">~2.5% p.a.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4 border-t border-gray-200 pt-6">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center border text-gray-500"><i class="fas fa-lock-open"></i></div>
+                                <div>
+                                    <p class="font-bold text-gray-900">No Lock-in</p>
+                                    <p class="text-xs text-gray-500">Withdraw funds anytime</p>
+                                </div>
+                            </div>
+                            <span class="font-bold text-gray-900">T+1 Liquidity</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center border text-gray-500"><i class="fas fa-coins"></i></div>
+                                <div>
+                                    <p class="font-bold text-gray-900">Low Entry</p>
+                                    <p class="text-xs text-gray-500">Start small, grow big</p>
+                                </div>
+                            </div>
+                            <span class="font-bold text-gray-900">Min 10k USD/SGD</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="contact.html" class="block w-full bg-wallex-purple text-white text-center py-4 rounded-xl font-bold hover:bg-purple-800 transition shadow-lg">Start Earning Today</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works (New Section) -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-900">How it works</h2>
+                    <p class="text-gray-500 mt-2">Simple steps to optimize your treasury.</p>
+                </div>
+                <div class="grid md:grid-cols-4 gap-8 relative">
+                    <!-- Step 1 -->
+                    <div class="text-center relative z-10">
+                        <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4 border-4 border-white shadow-lg font-bold">1</div>
+                        <h4 class="font-bold text-lg mb-2">Deposit</h4>
+                        <p class="text-sm text-gray-600">Fund your Wallex wallet with USD or SGD.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="text-center relative z-10">
+                        <div class="w-16 h-16 bg-purple-100 text-wallex-purple rounded-full flex items-center justify-center text-2xl mx-auto mb-4 border-4 border-white shadow-lg font-bold">2</div>
+                        <h4 class="font-bold text-lg mb-2">Invest</h4>
+                        <p class="text-sm text-gray-600">Allocate funds to Cash Management via dashboard.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="text-center relative z-10">
+                        <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4 border-4 border-white shadow-lg font-bold">3</div>
+                        <h4 class="font-bold text-lg mb-2">Earn</h4>
+                        <p class="text-sm text-gray-600">Interest accrues daily. Watch your balance grow.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="text-center relative z-10">
+                        <div class="w-16 h-16 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4 border-4 border-white shadow-lg font-bold">4</div>
+                        <h4 class="font-bold text-lg mb-2">Withdraw</h4>
+                        <p class="text-sm text-gray-600">Need cash? Redeem funds back to wallet in T+1.</p>
+                    </div>
+                    <!-- Connecting Line -->
+                    <div class="hidden md:block absolute top-8 left-0 w-full h-1 bg-gray-100 -z-0"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Underlying Assets (Detailed) -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6">World-Class Fund Managers</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            We don't manage the funds ourselves. We partner with regulated, top-tier asset managers to ensure your money is handled by the best in the industry.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white rounded shadow-sm flex items-center justify-center text-xl font-bold text-red-600">L</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Lion Global Investors</h4>
+                                    <p class="text-sm text-gray-600">One of the largest asset managers in Southeast Asia. Owned by OCBC Bank.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white rounded shadow-sm flex items-center justify-center text-xl font-bold text-blue-800">U</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">UOB Asset Management</h4>
+                                    <p class="text-sm text-gray-600">Leading Asian asset manager with over 30 years of experience.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h3 class="font-bold text-xl mb-6 text-center">Portfolio Composition (Representative)</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span>Bank Deposits</span>
+                                        <span class="font-bold">60%</span>
+                                    </div>
+                                    <div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-blue-500 rounded-full" style="width: 60%"></div></div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span>Government Bills</span>
+                                        <span class="font-bold">25%</span>
+                                    </div>
+                                    <div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-green-500 rounded-full" style="width: 25%"></div></div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span>Corporate Bonds (High Grade)</span>
+                                        <span class="font-bold">15%</span>
+                                    </div>
+                                    <div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-purple-500 rounded-full" style="width: 15%"></div></div>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-400 mt-6 text-center">*Allocations may vary based on market conditions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table (Existing - Enhanced) -->
+        <section class="py-20 bg-white">
+            <div class="max-w-5xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Wallex vs Traditional Fixed Deposits</h2>
+                
+                <div class="overflow-hidden bg-white rounded-2xl shadow-sm border border-gray-200">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50 border-b border-gray-200">
+                                <th class="p-6 text-gray-500 font-medium">Feature</th>
+                                <th class="p-6 font-bold text-wallex-purple text-lg">Wallex Cash Management</th>
+                                <th class="p-6 font-bold text-gray-900">Bank Fixed Deposit</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr>
+                                <td class="p-6 font-medium">Lock-in Period</td>
+                                <td class="p-6 text-green-600 font-bold"><i class="fas fa-check-circle mr-2"></i> No lock-in</td>
+                                <td class="p-6 text-gray-600">Usually 3 - 12 months</td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-medium">Withdrawal</td>
+                                <td class="p-6 text-green-600 font-bold"><i class="fas fa-check-circle mr-2"></i> Anytime (T+1)</td>
+                                <td class="p-6 text-gray-600">Penalty for early withdrawal</td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-medium">Returns</td>
+                                <td class="p-6 text-green-600 font-bold">Competitive Market Rates</td>
+                                <td class="p-6 text-gray-600">Fixed (often lower for short term)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-medium">Flexibility</td>
+                                <td class="p-6 text-green-600 font-bold">Top-up anytime</td>
+                                <td class="p-6 text-gray-600">New deposit required</td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-medium">Minimum</td>
+                                <td class="p-6 text-green-600 font-bold">Low (10k)</td>
+                                <td class="p-6 text-gray-600">Often High for best rates</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed FAQs -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-3xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group bg-white p-6 rounded-xl border border-gray-200 cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-gray-800 list-none">
+                            Is my principal guaranteed?
+                            <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <p class="text-gray-600 mt-4 text-sm leading-relaxed">
+                            No, investments in Money Market Funds are not capital guaranteed and are not insured by SDIC. However, MMFs are considered very low-risk investments as they invest in high-quality, short-term debt instruments. Negative returns are extremely rare in the history of SGD/USD MMFs.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-6 rounded-xl border border-gray-200 cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-gray-800 list-none">
+                            What are the fees?
+                            <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <p class="text-gray-600 mt-4 text-sm leading-relaxed">
+                            We charge a simple management fee that is deducted from the daily accrual. The rates shown to you (e.g. 2.5% p.a.) are typically net of fund-level fees. There are no entry or exit fees.
+                        </p>
+                    </details>
+
+                    <details class="group bg-white p-6 rounded-xl border border-gray-200 cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-gray-800 list-none">
+                            How fast can I get my money back?
+                            <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <p class="text-gray-600 mt-4 text-sm leading-relaxed">
+                            Liquidity is T+1 (Business Day). If you submit a withdrawal request before the cut-off time (usually 10 AM SGT), funds will be available in your Wallex wallet the next business day.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <section class="py-12 bg-white border-t border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <p class="text-xs text-gray-400 leading-relaxed">
+                    <strong>Important Note:</strong> This information is for educational purposes only and does not constitute financial advice. Investments in Money Market Funds are not bank deposits and are not insured by the Singapore Deposit Insurance Corporation (SDIC). The value of investments can go down as well as up. Past performance is not indicative of future performance. Yields are estimated based on current market conditions and may vary. Please consult with a financial advisor if you are unsure about the suitability of this product.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-wallex-dark text-gray-400 py-12 text-center text-sm">
+        <p>&copy; 2025 WELFULL TRADING Co. LIMITED.</p>
+    </footer>
+</body>
+</html>
