@@ -71,8 +71,8 @@
                         </div>
                     </div>
                     <!-- DROPDOWN MENU END -->
-                    <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Solutions</a>
-                    <a href="#" class="text-gray-600 hover:text-wallex-purple font-medium transition">Pricing</a>
+
+                    <a href="pricing.html" class="text-gray-600 hover:text-wallex-purple font-medium transition">Pricing</a>
                     <!-- DROPDOWN MENU START (Converted to Tailwind) -->
                     <div class="relative group cursor-pointer h-20 flex items-center">
                         <div class="flex items-center text-gray-600 hover:text-wallex-purple font-medium transition">
@@ -84,7 +84,7 @@
                         <!-- Dropdown Content -->
                         <div class="absolute top-16 left-0 w-60 bg-white shadow-lg rounded-lg py-2 border border-gray-100 hidden group-hover:block transition-all duration-200 z-50">
                             <a href="exchange.html" class="block px-4 py-2 text-sm text-gray-600 hover:text-wallex-purple hover:bg-purple-50 transition">Currency Converter</a>
-                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-600 hover:text-wallex-purple hover:bg-purple-50 transition">Referral</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-600 hover:text-wallex-purple hover:bg-purple-50 transition">FAQ</a>
                         </div>
                     </div>
                     <!-- DROPDOWN MENU END -->
@@ -157,23 +157,30 @@
             
             <!-- Sidebar Navigation (Sticky) -->
             <aside class="w-full lg:w-1/4">
-                <div class="sticky top-24 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                    <div class="p-4 bg-gray-50 border-b border-gray-100 font-bold text-gray-500 text-xs uppercase tracking-wider">Categories</div>
-                    <nav class="flex flex-col py-2">
-                        <a href="#general" class="sidebar-link active block px-5 py-3 hover:bg-gray-50 text-gray-600 transition">General & Account</a>
-                        <a href="#payments" class="sidebar-link block px-5 py-3 hover:bg-gray-50 text-gray-600 transition">Sending Money</a>
-                        <a href="#collections" class="sidebar-link block px-5 py-3 hover:bg-gray-50 text-gray-600 transition">Receiving Money</a>
-                        <a href="#safety" class="sidebar-link block px-5 py-3 hover:bg-gray-50 text-gray-600 transition">Safety & Security</a>
-                    </nav>
-                </div>
-                
-                <div class="mt-8 bg-purple-50 p-6 rounded-xl border border-purple-100 text-center">
-                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-wallex-purple mx-auto mb-4 shadow-sm">
-                        <i class="fas fa-headset"></i>
+                <!-- Wrapper div with sticky class -->
+                <div class="sticky top-24 space-y-8">
+                    
+                    <!-- Navigation Menu (Removed individual sticky) -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                        <div class="p-4 bg-gray-50 border-b border-gray-100 font-bold text-gray-500 text-xs uppercase tracking-wider">Categories</div>
+                        <nav class="flex flex-col py-2">
+                            <a href="#general" class="sidebar-link active block px-5 py-3 hover:bg-gray-50 text-gray-600 transition">General & Account</a>
+                            <a href="#payments" class="sidebar-link block px-5 py-3 hover:bg-gray-50 text-gray-600 transition">Sending Money</a>
+                            <a href="#collections" class="sidebar-link block px-5 py-3 hover:bg-gray-50 text-gray-600 transition">Receiving Money</a>
+                            <a href="#safety" class="sidebar-link block px-5 py-3 hover:bg-gray-50 text-gray-600 transition">Safety & Security</a>
+                        </nav>
                     </div>
-                    <h4 class="font-bold text-gray-900 mb-2">Still need help?</h4>
-                    <p class="text-sm text-gray-600 mb-4">Our support team is available Mon-Fri, 9am - 6pm SGT.</p>
-                    <a href="contact.html" class="inline-block bg-wallex-purple text-white px-6 py-2 rounded-lg font-bold text-sm hover:bg-purple-700 transition">Contact Support</a>
+                    
+                    <!-- Support Box (Removed individual sticky, now moves with wrapper) -->
+                    <div class="bg-purple-50 p-6 rounded-xl border border-purple-100 text-center">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-wallex-purple mx-auto mb-4 shadow-sm">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">Still need help?</h4>
+                        <p class="text-sm text-gray-600 mb-4">Our support team is available Mon-Fri, 9am - 6pm SGT.</p>
+                        <a href="contact.html" class="inline-block bg-wallex-purple text-white px-6 py-2 rounded-lg font-bold text-sm hover:bg-purple-700 transition">Contact Support</a>
+                    </div>
+
                 </div>
             </aside>
 
